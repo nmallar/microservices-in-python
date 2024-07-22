@@ -1,4 +1,5 @@
-FROM python:3.10.0-alpine3.15
+FROM python:3.13.0b4-alpine3.20
+RUN apk update && apk upgrade && apk add curl
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt 
